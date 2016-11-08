@@ -172,3 +172,5 @@ E:\works\LookCaresAPI\TlcApiService\bin\Antlr3.Runtime.pdb
 E:\works\LookCaresAPI\TlcApiService\obj\Debug\TlcApiService.csprojResolveAssemblyReference.cache
 E:\works\LookCaresAPI\TlcApiService\obj\Debug\TlcApiService.dll
 E:\works\LookCaresAPI\TlcApiService\obj\Debug\TlcApiService.pdb
+E:\works\LookCaresAPI\TlcApiService\bin\System.Web.Http.Cors.dll
+E:\works\LookCaresAPI\TlcApiService\bin\System.Web.Http.Cors.xml
