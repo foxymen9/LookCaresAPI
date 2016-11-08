@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TLC_DBClientModelStoreContainer" CdmEntityContainer="TLC_DBClientEntities">
+    <EntitySetMapping Name="tbLookClients">
+      <EntityTypeMapping TypeName="TLC_DBClientModel.tbLookClient">
+        <MappingFragment StoreEntitySet="tbLookClients">
+          <ScalarProperty Name="kLookClient" ColumnName="kLookClient" />
+          <ScalarProperty Name="vcClientID" ColumnName="vcClientID" />
+          <ScalarProperty Name="vcClientName" ColumnName="vcClientName" />
+          <ScalarProperty Name="vcSource" ColumnName="vcSource" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TLC_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbArtwork">
+    <Key>
+      <PropertyRef Name="kArtwork" />
+    </Key>
+    <Property Name="kArtwork" Type="Int32" Nullable="false" />
+    <Property Name="kLookClient" Type="Int32" />
+    <Property Name="vcClientID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcClientName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcArtworkDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vcImageType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="fImage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intImageWidth" Type="Int32" />
+    <Property Name="intImageHeight" Type="Int32" />
+    <Property Name="intFileSize" Type="Int32" />
+    <Property Name="vcFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbCustomerArtwork">
+    <Key>
+      <PropertyRef Name="kCustomerArtwork" />
+    </Key>
+    <Property Name="kCustomerArtwork" Type="Int32" Nullable="false" />
+    <Property Name="kLookClient" Type="Int32" />
+    <Property Name="vcFileDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vcFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcDropBoxURL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbFabric">
+    <Key>
+      <PropertyRef Name="kFabric" />
+    </Key>
+    <Property Name="kFabric" Type="Int32" Nullable="false" />
+    <Property Name="kLookClient" Type="Int32" />
+    <Property Name="kLookClientCustomer" Type="Int32" />
+    <Property Name="kFrame" Type="Int32" />
+    <Property Name="vcItemNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcSerialNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intHeight" Type="Int32" />
+    <Property Name="intWidth" Type="Int32" />
+    <Property Name="vcExtrusion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcNFCUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcLookCSR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="dtShippedFromTLC" Type="DateTime" Precision="3" />
+    <Property Name="dtInstalled" Type="DateTime" Precision="3" />
+    <Property Name="vcSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcClientID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcClientName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcStatus" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbFrame">
+    <Key>
+      <PropertyRef Name="kFrame" />
+    </Key>
+    <Property Name="kFrame" Type="Int32" Nullable="false" />
+    <Property Name="kLookClient" Type="Int32" />
+    <Property Name="kLookClientCustomer" Type="Int32" />
+    <Property Name="dtShippedFromTLC" Type="DateTime" Precision="3" />
+    <Property Name="dtInstalled" Type="DateTime" Precision="3" />
+    <Property Name="vcItemNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intWidth" Type="Int32" />
+    <Property Name="intHeight" Type="Int32" />
+    <Property Name="vcFrame" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcExtrusion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcFinish" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcLighting" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcMountingType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcSerialNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcFrameFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcInstalled" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcLookCSR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcInStoreLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcClientID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcClientName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbInstallationGuide">
+    <Key>
+      <PropertyRef Name="kInstallationGuide" />
+    </Key>
+    <Property Name="kInstallationGuide" Type="Int32" Nullable="false" />
+    <Property Name="vcDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vcType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="fFile" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intFileSize" Type="Int32" />
+    <Property Name="vcFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbInStoreLocation">
+    <Key>
+      <PropertyRef Name="kInStoreLocation" />
+    </Key>
+    <Property Name="kInStoreLocation" Type="Int32" Nullable="false" />
+    <Property Name="vcInStoreLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbLookClientCustomer">
+    <Key>
+      <PropertyRef Name="kLookClientCustomer" />
+    </Key>
+    <Property Name="kLookClientCustomer" Type="Int32" Nullable="false" />
+    <Property Name="kLookClient" Type="Int32" />
+    <Property Name="vcClientCustomerID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcClientCustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToAddress4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToCity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToStateProvince" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToCountry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToPostal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcShipToContact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vcLookCSR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbLookClient">
+    <Key>
+      <PropertyRef Name="kLookClient" />
+    </Key>
+    <Property Name="kLookClient" Type="Int32" Nullable="false" />
+    <Property Name="vcClientID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcClientName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vcSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbPromotionalMaterial">
+    <Key>
+      <PropertyRef Name="kPromotionalMaterial" />
+    </Key>
+    <Property Name="kPromotionalMaterial" Type="Int32" Nullable="false" />
+    <Property Name="vcDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vcFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intFileSize" Type="Int32" />
+    <Property Name="fFile" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbUser">
+    <Key>
+      <PropertyRef Name="kUser" />
+      <PropertyRef Name="bActive" />
+      <PropertyRef Name="bInstaller" />
+    </Key>
+    <Property Name="kUser" Type="Int32" Nullable="false" />
+    <Property Name="kLookClient" Type="Int32" />
+    <Property Name="bActive" Type="Boolean" Nullable="false" />
+    <Property Name="kUserLevel" Type="Int32" />
+    <Property Name="mUserProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vcUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcFirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="bInstaller" Type="Boolean" Nullable="false" />
+    <Property Name="vcUserEmailAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intCellPhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcPosition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vcCustomer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserLevelPermission">
+    <Key>
+      <PropertyRef Name="UserLevelID" />
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="Permission" />
+    </Key>
+    <Property Name="UserLevelID" Type="Int32" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Permission" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLevel">
+    <Key>
+      <PropertyRef Name="UserLevelID" />
+      <PropertyRef Name="UserLevelName" />
+    </Key>
+    <Property Name="UserLevelID" Type="Int32" Nullable="false" />
+    <Property Name="UserLevelName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TLC_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbArtworks" EntityType="Self.tbArtwork" />
+    <EntitySet Name="tbCustomerArtworks" EntityType="Self.tbCustomerArtwork" />
+    <EntitySet Name="tbFabrics" EntityType="Self.tbFabric" />
+    <EntitySet Name="tbFrames" EntityType="Self.tbFrame" />
+    <EntitySet Name="tbInstallationGuides" EntityType="Self.tbInstallationGuide" />
+    <EntitySet Name="tbInStoreLocations" EntityType="Self.tbInStoreLocation" />
+    <EntitySet Name="tbLookClientCustomers" EntityType="Self.tbLookClientCustomer" />
+    <EntitySet Name="tbLookClients" EntityType="Self.tbLookClient" />
+    <EntitySet Name="tbPromotionalMaterials" EntityType="Self.tbPromotionalMaterial" />
+    <EntitySet Name="tbUsers" EntityType="Self.tbUser" />
+    <EntitySet Name="UserLevelPermissions" EntityType="Self.UserLevelPermission" />
+    <EntitySet Name="UserLevels" EntityType="Self.UserLevel" />
+  </EntityContainer>
+</Schema>
