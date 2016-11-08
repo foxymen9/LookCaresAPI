@@ -22,7 +22,7 @@
 
 - Get ClientLocations by Client
 
-	[GET]/api/ClientLocations/ByClientKey/{:CientKey}
+	[GET]/api/ClientLocations/ByClientKey/{:ClientKey}
 
 
 - Get ClientLocation by key
